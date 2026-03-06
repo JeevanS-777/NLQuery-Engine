@@ -1,0 +1,30 @@
+# The name of our Conda environment. This will appear in your terminal prompt.
+name: nlp_assistant_env
+
+# Channels are the repositories Conda will search for packages.
+# 'conda-forge' is the community-maintained channel with the widest selection.
+# 'defaults' is Conda's own channel. Listing conda-forge first is best practice.
+channels:
+  - conda-forge
+  - defaults
+
+# List of all dependencies required for the project.
+dependencies:
+  # Specify the Python version for reproducibility.
+  - python=3.11
+
+  # Core data and web server libraries available directly from Conda channels.
+  - fastapi
+  - uvicorn
+  - pandas
+  - openpyxl
+  - sqlalchemy
+  - python-dotenv
+  - pydantic
+
+  # The 'pip' section is a fallback. 
+  # Use this for packages that are not on Conda channels or are better installed via pip.
+  - pip:
+    - python-multipart
+    - pypdf
+    - openai

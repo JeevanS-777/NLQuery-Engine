@@ -1,0 +1,59 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+.out/
+.next/
+.cache/
+.temp/
+
+# Env files (never commit secrets)
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Compiled code
+*.class
+*.o
+*.so
+
+# Package managers
+package-lock.json
+pnpm-lock.yaml
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Local databases
+*.sqlite
+*.db
+
+# Misc
+*.zip
+*.tar
+*.tgz

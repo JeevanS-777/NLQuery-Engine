@@ -1,0 +1,18 @@
+.sidebar { height: 100%; display: flex; flex-direction: column; background: var(--bg-secondary); }
+.header { height: var(--header-height); padding: 0 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;}
+.collapsed .header { justify-content: center; padding: 0; }
+.title { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 1px; }
+.toggleBtn { background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 8px; display: flex; transition: 0.2s; }
+.toggleBtn:hover { color: var(--text-primary); }
+.content { padding: 1.5rem; overflow-y: auto; flex: 1; }
+.subHeader { font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 1rem; }
+.fileList { list-style: none; padding: 0; margin: 0; }
+.fileItem { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border-radius: 6px; cursor: pointer; transition: 0.2s; margin-bottom: 4px; border: 1px solid transparent; }
+.fileItem:hover { background: var(--bg-tertiary); }
+.active { background: var(--accent-primary) !important; color: white; }
+.fileMain { display: flex; align-items: center; gap: 10px; overflow: hidden; }
+.icon { flex-shrink: 0; font-size: 1.1rem; }
+.fileName { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.85rem; }
+.deleteFileBtn { background: none; border: none; color: var(--text-secondary); cursor: pointer; opacity: 0; padding: 4px; transition: 0.2s; display: flex; }
+.fileItem:hover .deleteFileBtn { opacity: 1; }
+.deleteFileBtn:hover { color: #e74c3c; transform: scale(1.1); }

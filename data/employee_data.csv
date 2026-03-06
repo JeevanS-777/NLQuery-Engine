@@ -1,0 +1,9 @@
+EmployeeID,FirstName,LastName,Department,HireDate,Salary,PerformanceRating
+101,Alice,Johnson,Engineering,2022-03-15,110000,5
+102,Bob,Williams,Marketing,2021-08-01,85000,4
+103,Charlie,Brown,Engineering,2023-01-20,95000,4
+104,Diana,Miller,Sales,2020-11-12,125000,5
+105,Eve,Davis,Marketing,2022-05-30,92000,3
+106,Frank,Garcia,Sales,2023-02-18,78000,4
+107,Grace,Rodriguez,Engineering,2021-09-10,130000,5
+108,Heidi,Martinez,HR,2022-04-05,75000,4

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #121212;
+  --bg-tertiary: #1A1A1A;
+  --text-primary: #EDEDED;
+  --text-secondary: #888888;
+  --accent-primary: #5E6AD2;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-radius: 8px;
+  --header-height: 60px; /* CRITICAL: Enforces horizontal alignment across panels */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+#root { height: 100vh; width: 100vw; }
+
+/* --- PREMIUM TOOLTIP ENGINE --- */
+[data-tooltip], [data-tooltip-bottom] { position: relative; }
+
+[data-tooltip]::after,[data-tooltip-bottom]::after {
+  position: absolute;
+  background: #1A1A1A; color: #fff;
+  padding: 6px 12px; border-radius: 6px;
+  font-size: 0.75rem; font-weight: 500;
+  white-space: nowrap; opacity: 0; pointer-events: none;
+  transition: all 0.15s cubic-bezier(0,0,0.2,1);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  z-index: 10000;
+}
+
+/* Default Top Tooltip */[data-tooltip]::after {
+  content: attr(data-tooltip);
+  bottom: 125%; left: 50%;
+  transform: translateX(-50%) translateY(5px) scale(0.95);
+}[data-tooltip]:hover::after { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+
+/* Bottom Tooltip (For Headers) */
+[data-tooltip-bottom]::after {
+  content: attr(data-tooltip-bottom);
+  top: 135%; left: 50%;
+  transform: translateX(-50%) translateY(-5px) scale(0.95);
+}
+[data-tooltip-bottom]:hover::after { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+
+/* Modern Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
